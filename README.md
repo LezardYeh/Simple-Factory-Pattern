@@ -20,10 +20,10 @@ Asp.net MVC, ReportViewer
 	var reportType = request.form["type"]; 	
 	switch(reportType){
 		case "A":
-			service.getReportA();
+			service.GetReportA();
 		break;
 		case "B":
-			service.getReportA();
+			service.GetReportA();
 		break;
 		...
     }
@@ -54,15 +54,15 @@ Service也相對臃腫，維護不易
 
 	 		//Middle Layer (webform page) 
 			var reportType = request.form["type"];
-			var report = ReportFactory.create(reportType);
+			var report = ReportFactory.Create(reportType);
 			
 			//about reportViewer
 			reportViewer.Path = report.Path;
-			reportViewer.DataSource = report.getData();
+			reportViewer.DataSource = report.GetData();
 1. 建立一個Factory，專門處理報表類別代碼與結果的對應關係，並協助主程式取得正確的報表(以現階段的設計 Factory 隨著報表增多必須被擴充)；
 		
   		public class Factory{
-			public IReport create(reportType){
+			public IReport Create(reportType){
 				switch(reportType){
 					case "A";
 						return new ReportA();
