@@ -33,10 +33,10 @@ Service也相對臃腫，維護不易
 
 
 	//Service Layer
-	public ReportA(){
+	public List<ReportA> GetReportA(){
 		//code...
 	}
-	public ReportB(){
+	public List<ReportB> GetReportB(){
 		//code...
 	}
 	...
