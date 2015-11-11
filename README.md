@@ -9,7 +9,7 @@ Asp.net MVC
 
 **實作方法：**
 
-技術主體採MVC，報表元件為ReportViewer，因該元件屬於Webform無法直接使用，因此必須崁入一個iframe 框住 webform頁面當做中介層，使ReportViewer可正常運行；即MVC主頁用Javascript依照下拉選單的值，改變iframe的url參數資訊。
+報表元件為ReportViewer，因該元件屬於Webform無法直接使用，因此必須崁入一個iframe 框住 webform頁面當做中介層，使ReportViewer可正常運行；即MVC主頁用Javascript依照下拉選單的值，改變iframe的url參數資訊。
 
 **發生問題：**
 
