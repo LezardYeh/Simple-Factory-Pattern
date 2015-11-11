@@ -61,8 +61,8 @@ Service也相對臃腫，維護不易
 			reportViewer.DataSource = report.GetData();
 1. 建立一個Factory，專門處理報表類別代碼與結果的對應關係，並協助主程式取得正確的報表(以現階段的設計 Factory 隨著報表增多必須被擴充)；
 		
-  		public class Factory{
-			public IReport Create(reportType){
+  		public static class ReportFactory{
+			public static IReport Create(reportType){
 				switch(reportType){
 					case "A";
 						return new ReportA();
