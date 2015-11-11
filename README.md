@@ -1,22 +1,22 @@
-## Simple Factory Pattern ��@�ר� ##
+## Simple Factory Pattern 實作案例 ##
 
-**�\��ݨD�G**
+**功能需求：**
 
-�}�o�����w���\��A��User�z�L�@�ӤU�Կ���ܳ������O(�@20�إH�W)�A�̷өҿﵲ�G��ܳ����C
+開發報表預覽功能，讓User透過一個下拉選單選擇報表類別(共20種以上)，依照所選結果顯示報表。
 
-**�޳N��k�G**
+**技術方法：**
 
-ReportViewer����L�k�����bMVC�������ϥΡA�]�������r�J�@��iframe �� webform�������������h�A��ReportViewer�i���`�B��F�e�ݫh�̷ӤU�Կ�檺�ȡA����iframe��url�ѼƸ�T�C
+ReportViewer元件無法直接在MVC頁面中使用，因此必須崁入一個iframe 及 webform頁面當做中介層，使ReportViewer可正常運行；前端則依照下拉選單的值，改變iframe的url參數資訊。
 
-**�o�Ͱ��D�G**
+**發生問題：**
 
-�]�C�ӳ����榡�����@�ˡA�|���ͤG�Q�h�� ViewModel �� �ӷ~�޿� �A�i��|�y����ݵ{�����ä����A���@�����F�Y�������P�ɮ׳B�z�A�h�|�h����20�����������BService�A�{���X���M�o�H�����A���O�|���{�ɮ׺޲z���D�C
+因每個報表格式都不一樣，會產生二十多種 ViewModel 及 商業邏輯 ，可能會造成後端程式紊亂冗長，維護不易；若分成不同檔案處理，則會多產生20隻中介頁面、Service，程式碼雖然得以分散，但是會面臨檔案管理問題。
 
 ----------
 
 
-**�z�Q���G�G**
+**理想結果：**
 
-1. �����ɮץu���@���A�B�u���`��Ʀp��PReportViewer���󤬰�
-1. �إߤ@��Factory�A�M���B�z�������O�N�X�P���G���������Y�A�è�U�D�{�����o���T������
-1. �N�C�س�������ơA��Factory�^�ǦU�ع�@�ۦPInterface�����G
+1. 中介檔案只有一隻，且只關注資料如何與ReportViewer元件互動；
+1. 建立一個Factory，專門處理報表類別代碼與結果的對應關係，並協助主程式取得正確的報表；
+1. 將每種報表物件化，供Factory回傳各種實作相同Interface的結果。
