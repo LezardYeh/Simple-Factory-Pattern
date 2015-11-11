@@ -78,6 +78,11 @@ Service也相對臃腫，維護不易
 1. 將每種報表物件實作相同Interface，供Factory回傳結果。
 
 
+		//Interface
+		public Interface IReport{
+			List<object> GetData();
+		}
+
 		//ReportA.cs
 		public class ReportA:IReport{
 		}
@@ -89,7 +94,7 @@ Service也相對臃腫，維護不易
 爾後，開發人員要建立一張新的報表，不用開新的頁面(且大半程式碼都是Copy Paste)，或者毫無章法的在一個檔案中不斷追加程式碼(當然，還必須跟命名原則繼續纏鬥)；用了Simple Factory Pattern的我們，只需要做兩件事情：
 
 1. 建立自己的Report 類別，並且實作IReport；
-1. 在Factory中擴充該報表的對應規則即可。
+1. 在Factory中擴充該報表的對應規則即可。(使用reflection new instance 時，此點可省略)
 
 
 
