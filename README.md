@@ -44,12 +44,50 @@ Service也相對臃腫，維護不易
 若分成不同檔案處理，則會多產生20隻中介頁面、Service，程式碼雖然得以分散，但重複的程式碼過多，且面臨檔案管理問題。
 **兩者都是個大災難！**
 
-----------
 
 
-**理想結果：**
 
-1. 中介檔案只有一隻，且只關注資料如何與ReportViewer元件互動；
-1. 建立一個Factory，專門處理報表類別代碼與結果的對應關係，並協助主程式取得正確的報表；
-1. 將每種報表物件化，供Factory回傳各種實作相同Interface的結果。
+## 理想結果： ##
 
+1. 中介檔案只有一隻，且只關注資料如何與ReportViewer元件互動，因此不應該再被更動(對修改封閉原則)；
+
+
+	 		//Middle Layer (webform page) 
+			var reportType = request.form["type"];
+			var report = ReportFactory.create(reportType);
+			
+			//about reportViewer
+			reportViewer.Path = report.Path;
+			reportViewer.DataSource = report.getData();
+1. 建立一個Factory，專門處理報表類別代碼與結果的對應關係，並協助主程式取得正確的報表(以現階段的設計 Factory 隨著報表增多必須被擴充)；
+		
+  		public class Factory{
+			public IReport create(reportType){
+				switch(reportType){
+					case "A";
+						return new ReportA();
+					break;
+					case "B";
+						return new ReportB();
+					break;
+					....
+				}
+			}
+		}
+
+1. 將每種報表物件實作相同Interface，供Factory回傳結果。
+
+
+		//ReportA.cs
+		public class ReportA:IReport{
+		}
+
+		//ReportB.cs
+		public class ReportA:IReport{
+		}
+
+
+
+
+
+	
