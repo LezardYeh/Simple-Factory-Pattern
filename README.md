@@ -70,10 +70,8 @@ Service也相對臃腫，維護不易
 				switch(reportType){
 					case "A";
 						return new ReportA();
-					break;
 					case "B";
 						return new ReportB();
-					break;
 					....
 				}
 			}
