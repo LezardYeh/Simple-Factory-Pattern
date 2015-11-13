@@ -7,12 +7,16 @@ Asp.net MVC, ReportViewer
 
 財務報表預覽功能，讓User透過一個下拉選單選擇報表類別(共20種以上)，依照所選結果顯示報表。
 
+<<<<<<< HEAD
 >  實作上 ，因ReportViewer屬於Webform系列元件，因此必須於MVC頁面中崁入一個iframe 框住 webform頁面當做中介層，ReportViewer才能正常運行；即MVC主頁用Javascript依照下拉選單的值，改變iframe的url來觸發中介頁面運作ReportViewer。
+=======
+> *實作方法：* 
+> *因ReportViewer屬於Webform系列元件，因此必須於MVC頁面中崁入一個iframe 框住 webform頁面當做中介層，ReportViewer才能正常運行；即MVC主頁用Javascript依照下拉選單的值，改變iframe的url來觸發中介頁面運作ReportViewer。*
+>>>>>>> parent of 79f1ace... 1.6
 
 **發生問題：**
 
 因每個報表格式都不一樣，會有二十多種不同 ReportModel 及 商業邏輯 ，在單一個中介程式中判斷各種報表類別將造成程式紊亂冗長
-
 
     
     //Middle Layer (webform page) 
