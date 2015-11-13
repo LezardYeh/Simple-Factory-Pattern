@@ -1,7 +1,7 @@
 ## Simple Factory Pattern 實作案例 ##
 
 **技術：**
-Asp.net MVC, ReportViewer
+Asp.net MVC, ReportViewer 
 
 **功能需求：**
 
