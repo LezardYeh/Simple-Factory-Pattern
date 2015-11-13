@@ -20,12 +20,12 @@ Asp.net MVC, ReportViewer
 	switch(reportType){
 		case "A":
 			var report = service.GetReportA();
-			reportViewer.Path = report.Path;
+			reportViewer.Path = "A.rdlc";
 			reportViewer.DataSource = report.GetData();
 		break;
 		case "B":
 			var report = service.GetReportB();
-			reportViewer.Path = report.Path;
+			reportViewer.Path = "B.rdlc";
 			reportViewer.DataSource = report.GetData();
 		break;
 		...
