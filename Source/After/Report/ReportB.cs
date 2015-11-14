@@ -2,30 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Before.Report.Model;
+using After.Report.Interface;
+using After.Report.Model;
 
-namespace Before
+namespace After.Report
 {
-    public class Service
+    public class ReportB:IReport
     {
-        //報表數量擴充，必須修改程式
-
-        //取得報表Ａ資料
-        public IEnumerable<ReportAModel> GetReportAData()
+        public string Path
         {
-            var result = new List<ReportAModel>
-            {
-                new ReportAModel()
-                {
-                    CompanyId = "Test",
-                    Value = 100
-                }
-            };
-            return result;
+            get { return "Report/Rdlc/ReportB.rdlc"; }
         }
 
-        //取得報表Ｂ資料
-        public IEnumerable<ReportBModel> GetReportBData()
+        public System.Collections.IEnumerable GetData()
         {
             var result = new List<ReportBModel>()
             {

@@ -2,3 +2,5 @@ C:\Users\Lezard\Documents\GitHub\Simple-Factory-Pattern\Source\After\bin\After.d
 C:\Users\Lezard\Documents\GitHub\Simple-Factory-Pattern\Source\After\bin\After.pdb
 C:\Users\Lezard\Documents\GitHub\Simple-Factory-Pattern\Source\After\obj\Debug\After.dll
 C:\Users\Lezard\Documents\GitHub\Simple-Factory-Pattern\Source\After\obj\Debug\After.pdb
+C:\Users\Lezard\Documents\GitHub\Simple-Factory-Pattern\Source\After\obj\Debug\RdlCompile.cache
+C:\Users\Lezard\Documents\GitHub\Simple-Factory-Pattern\Source\After\obj\Debug\RdlCompile.compiled

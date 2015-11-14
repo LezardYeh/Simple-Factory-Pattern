@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="Before.Index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="After.Index" %>
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
@@ -10,12 +10,13 @@
     <title></title>
 </head>
 <body>
-    Before
+    After
     <form id="form1" runat="server">
     <div>
         <rsweb:ReportViewer ID="ReportViewer1" runat="server"></rsweb:ReportViewer>
-    </div>
+    </div> 
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     </form>
+   
 </body>
 </html>

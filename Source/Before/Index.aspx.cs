@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Services.Description;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using Microsoft.Reporting.WebForms;
 
 namespace Before
@@ -23,11 +17,11 @@ namespace Before
                 switch (reportType)
                 {
                     case "A":
-                        ReportViewer1.LocalReport.ReportPath = "Report/ReportA.rdlc";
+                        ReportViewer1.LocalReport.ReportPath = "Report/Rdlc/ReportA.rdlc";
                         mainData = new ReportDataSource("MainData", service.GetReportAData());
                         break;
                     case "B":
-                        ReportViewer1.LocalReport.ReportPath = "Report/ReportB.rdlc";
+                        ReportViewer1.LocalReport.ReportPath = "Report/Rdlc/ReportB.rdlc";
                         mainData = new ReportDataSource("MainData", service.GetReportBData());
                         break;
                     //case "C":

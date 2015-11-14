@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Before.Report.Model
 {
-    public class ReportB
+    public class ReportBModel
     {
         public string CompanyId { get; set; }
         public DateTime Time { get; set; }

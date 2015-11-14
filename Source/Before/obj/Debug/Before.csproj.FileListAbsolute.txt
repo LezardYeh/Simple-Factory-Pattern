@@ -2,6 +2,6 @@ C:\Users\Lezard\Documents\GitHub\Simple-Factory-Pattern\Source\Before\bin\Before
 C:\Users\Lezard\Documents\GitHub\Simple-Factory-Pattern\Source\Before\bin\Before.pdb
 C:\Users\Lezard\Documents\GitHub\Simple-Factory-Pattern\Source\Before\obj\Debug\Before.dll
 C:\Users\Lezard\Documents\GitHub\Simple-Factory-Pattern\Source\Before\obj\Debug\Before.pdb
-C:\Users\Lezard\Documents\GitHub\Simple-Factory-Pattern\Source\Before\obj\Debug\Before.csprojResolveAssemblyReference.cache
 C:\Users\Lezard\Documents\GitHub\Simple-Factory-Pattern\Source\Before\obj\Debug\RdlCompile.cache
 C:\Users\Lezard\Documents\GitHub\Simple-Factory-Pattern\Source\Before\obj\Debug\RdlCompile.compiled
+C:\Users\Lezard\Documents\GitHub\Simple-Factory-Pattern\Source\Before\obj\Debug\Before.csprojResolveAssemblyReference.cache
