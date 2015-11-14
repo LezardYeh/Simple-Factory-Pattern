@@ -11,7 +11,7 @@ namespace Before
             {
                 var service = new Service();
                 ReportDataSource mainData;
-                var reportType = "B";
+                var reportType = "A";
 
                 //報表數量擴充，必須修改程式
                 switch (reportType)
