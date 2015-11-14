@@ -45,9 +45,7 @@ Service也相對臃腫，維護不易
 若分成不同檔案處理，則會多產生20隻中介頁面、Service，程式碼雖然得以分散，但重複的程式碼過多，且面臨檔案管理問題。
 **兩者都是個大災難！**
 
-
-
-
+<br>
 ## 理想結果： ##
 
 1. 中介檔案只有一隻，且只關注資料如何與ReportViewer元件互動，因此不應該再被更動(對修改封閉原則)；
@@ -97,7 +95,22 @@ Service也相對臃腫，維護不易
 
 
 
+> 
+
 > *以上描述重點概念, 程式碼僅為簡化版本*
 
 
-> 11/12/2015 6:55:45 AM 
+> *11/12/2015 6:55:45 AM* 
+
+<br>
+
+## Sample Code ##
+
+###Project: SimpleFactoryPattern###
+
+- **Before：**直接將所有程式碼寫於同一個檔案，僅用Switch Case整理程式碼；每次新增報表都必須對Index.aspx.cs, Service.cs做修改。
+- **After：**使用Factory Pattern及Reflection；新增報表只需要撰寫對應的 Report Class 即可
+> 
+> *不管用哪種做法，自行建立ReportModel及Rdlc都為必要工作*
+
+> *11/14/2015 10:33:15 PM*
