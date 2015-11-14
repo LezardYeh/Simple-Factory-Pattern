@@ -10,7 +10,7 @@
     <title></title>
 </head>
 <body>
-    After
+    Factory pattern with reflection
     <form id="form1" runat="server">
     <div>
         <rsweb:ReportViewer ID="ReportViewer1" runat="server"></rsweb:ReportViewer>
