@@ -110,7 +110,8 @@ Service也相對臃腫，維護不易
 
 - **Before：**直接將所有程式碼寫於同一個檔案，僅用Switch Case整理程式碼；每次新增報表都必須對Index.aspx.cs, Service.cs做修改。
 - **After：**使用Factory Pattern及Reflection；新增報表只需要撰寫對應的 Report Class 即可
-> 
-> *不管用哪種做法，自行建立ReportModel及Rdlc都為必要工作*
 
+
+> *不管用哪種做法，自行建立ReportModel及Rdlc都為必要工作*
+>
 > *11/14/2015 10:33:15 PM*
