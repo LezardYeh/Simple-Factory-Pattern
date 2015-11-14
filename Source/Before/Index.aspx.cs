@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.Reporting.WebForms;
@@ -30,11 +31,11 @@ namespace Before
                         mainData = new ReportDataSource("MainData", service.GetReportBData());
                         break;
                     //case "C":
-                        //   ....
+                    //   ....
                     //break;
-                   
+
                     //case "Z":
-                        //   ....
+                    //   ....
                     //break;
 
                     default:
@@ -46,7 +47,7 @@ namespace Before
                 ReportViewer1.LocalReport.DataSources.Add(mainData);
                 ReportViewer1.LocalReport.Refresh();
             }
-           
+
         }
     }
 }

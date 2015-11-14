@@ -218,7 +218,7 @@
         <TablixRowHierarchy>
           <TablixMembers>
             <TablixMember>
-              <KeepWithGroup>Before</KeepWithGroup>
+              <KeepWithGroup>After</KeepWithGroup>
             </TablixMember>
             <TablixMember>
               <Group Name="詳細資料" />
@@ -235,7 +235,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.13786in</Height>
+    <Height>2in</Height>
     <Style />
   </Body>
   <Width>6.5in</Width>
@@ -256,27 +256,13 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>bc966e1e-ef53-49bb-911a-9f1845603c0d</rd:DataSourceID>
-    </DataSource>
-    <DataSource Name="BeforeReportModel">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>af4d73b7-243f-4949-8527-e57548754979</rd:DataSourceID>
-    </DataSource>
-    <DataSource Name="BeforeReportModel1">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>8860a7c2-6be1-4320-a942-68bea5be131e</rd:DataSourceID>
+      <rd:DataSourceID>5bb1d864-8f7d-4889-9d27-b988ec2e7c90</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="MainData">
       <Query>
-        <DataSourceName>BeforeReportModel1</DataSourceName>
+        <DataSourceName>Before</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -286,17 +272,17 @@
         </Field>
         <Field Name="Value">
           <DataField>Value</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Before.Report.Model</rd:DataSetName>
-        <rd:TableName>ReportADataSet</rd:TableName>
-        <rd:ObjectDataSourceSelectMethod>MainData</rd:ObjectDataSourceSelectMethod>
-        <rd:ObjectDataSourceType>Before.Report.Model.ReportADataSet, Before, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>Before</rd:DataSetName>
+        <rd:TableName>Service</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>GetReportAData</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>Before.Service, Before, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>e5bc9922-6a00-4fa9-abc7-583ce60b756f</rd:ReportID>
+  <rd:ReportID>ffa42d9c-ebdf-4811-97d9-9327a03370f3</rd:ReportID>
 </Report>

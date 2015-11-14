@@ -44,6 +44,6 @@ namespace Before
             };
 
             return result;
-        } 
+        }
     }
 }

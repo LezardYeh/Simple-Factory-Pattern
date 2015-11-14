@@ -1,6 +1,0 @@
-E:\GitHubProject\SimpleFactoryPattern\After\bin\After.dll
-E:\GitHubProject\SimpleFactoryPattern\After\bin\After.pdb
-E:\GitHubProject\SimpleFactoryPattern\After\obj\Debug\After.dll
-E:\GitHubProject\SimpleFactoryPattern\After\obj\Debug\After.pdb
-E:\GitHubProject\SimpleFactoryPattern\After\obj\Debug\RdlCompile.cache
-E:\GitHubProject\SimpleFactoryPattern\After\obj\Debug\RdlCompile.compiled
