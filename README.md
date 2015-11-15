@@ -48,7 +48,7 @@ Service也相對臃腫，維護不易
 <br>
 ## 理想結果： ##
 
-1. 中介檔案只有一隻，且只關注資料如何與ReportViewer元件互動，因此不應該再被更動(對修改封閉原則)；
+1. 中介檔案只有一隻，且只關注資料如何與ReportViewer元件互動，因此不應該再被更動(**對修改封閉原則**)；
 
 
 	 		//Middle Layer (webform page) 
@@ -58,7 +58,7 @@ Service也相對臃腫，維護不易
 			//about reportViewer
 			reportViewer.Path = report.Path;
 			reportViewer.DataSource = report.GetData();
-1. 建立一個Factory，專門處理報表類別代碼與結果的對應關係，並協助主程式取得正確的報表(單純使用 Factory ，隨著報表增多必須被擴充；搭配Reflection後，可不必再修改，同樣達到修改封閉效果)；
+1. 建立一個Factory，專門處理報表類別代碼與結果的對應關係，並協助主程式取得正確的報表(單純使用 Factory ，隨著報表增多必須被擴充；搭配Reflection後，可不必再修改，同樣達到**修改封閉**效果)；
 		
   		public static class ReportFactory{
 			public static IReport Create(reportType){
@@ -100,7 +100,6 @@ Service也相對臃腫，維護不易
 > *以上描述重點概念, 程式碼僅為簡化版本*
 
 
-> *11/12/2015 6:55:45 AM* 
 
 <br>
 
@@ -108,10 +107,10 @@ Service也相對臃腫，維護不易
 
 ###Project: <a href="https://github.com/LezardYeh/Simple-Factory-Pattern/tree/master/Source">SimpleFactoryPattern</a>###
 
-- **<a href="https://github.com/LezardYeh/Simple-Factory-Pattern/tree/master/Source/Before">Before</a>：**直接將所有程式碼寫於同一個檔案，僅用Switch Case整理程式碼；每次新增報表都必須對Index.aspx.cs, Service.cs做修改；
+- **<a href="https://github.com/LezardYeh/Simple-Factory-Pattern/tree/master/Source/Before">Before</a>：**直接將所有程式碼寫於同一個檔案，僅用流程控制語法來整理程式碼；每次新增報表都必須對Index.aspx.cs, Service.cs做修改；
 - **<a href="https://github.com/LezardYeh/Simple-Factory-Pattern/tree/master/Source/After">After</a>：**使用Factory Pattern及Reflection；新增報表只需要撰寫對應的 Report Class 即可。
 
 
 > *不管用哪種做法，自行建立ReportModel及Rdlc都為必要工作*
 >
-> *11/14/2015 10:33:15 PM*
+> *11/16/2015 7:36:09 AM  PM*
