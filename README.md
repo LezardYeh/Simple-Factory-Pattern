@@ -1,4 +1,4 @@
-## Simple Factory Pattern 實作案例 ##
+## Simple Factory Pattern Example ##
 
 **技術：**
 Asp.net MVC, ReportViewer   
@@ -58,7 +58,7 @@ Service也相對臃腫，維護不易
 			//about reportViewer
 			reportViewer.Path = report.Path;
 			reportViewer.DataSource = report.GetData();
-1. 建立一個Factory，專門處理報表類別代碼與結果的對應關係，並協助主程式取得正確的報表(以現階段的設計 Factory 隨著報表增多必須被擴充)；
+1. 建立一個Factory，專門處理報表類別代碼與結果的對應關係，並協助主程式取得正確的報表(單純使用 Factory ，隨著報表增多必須被擴充；搭配Reflection後，可不必再修改，同樣達到修改封閉效果)；
 		
   		public static class ReportFactory{
 			public static IReport Create(reportType){
