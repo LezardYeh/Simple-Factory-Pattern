@@ -58,7 +58,7 @@ Service也相對臃腫，維護不易
 			//about reportViewer
 			reportViewer.Path = report.Path;
 			reportViewer.DataSource = report.GetData();
-1. 建立一個Factory，專門處理報表類別代碼與結果的對應關係，並協助主程式取得正確的報表(單純使用 Factory ，隨著報表增多必須被擴充；搭配Reflection後，可不必再修改，同樣達到**修改封閉**效果)；
+1. 建立一個Factory及定義IReport Interface，在Factory處理報表類別代碼與回傳報表的對應規則，傳回實作IReport的報表物件(單純使用 Factory ，隨著報表增多Factory必須被擴充；搭配Reflection後，可不必再修改，同樣達到**修改封閉**效果)；
 		
   		public static class ReportFactory{
 			public static IReport Create(reportType){
